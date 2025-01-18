@@ -1,0 +1,11 @@
+{
+    "name": "Toggle Remaining Card Counts",
+    "version": "1.0",
+    "description": "Toggle the Remaining Card Count with a direct menu bar option and/or keyboard shortcut.",
+    "author": "Raj Kundu",
+    "dependencies": {
+      "anki": "2.1.0"
+    },
+    "addonId": "toggle_counts",
+    "config": []
+  }
