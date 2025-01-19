@@ -27,6 +27,7 @@ def init():
         key_seq = QKeySequence(config['shortcut'])
         if key_seq.matches(Qt.Key.Key_unknown) != QKeySequence.SequenceMatch.NoMatch:
             showInfo(f"WARNING: The configured keyboard shortcut for the Toggle Remaining Card Count add-on is invalid! Please double-check the configuration under Tools > Add-Ons.")
+            return
 
     toggle_remaining_card_count = toggle_count_via_preferences # default
     if config is not None and "method" in config and config['method']:
@@ -37,6 +38,7 @@ def init():
             pass # this is already the default
         else:
             showInfo(f"WARNING: 'method' for the Toggle Remaining Card Count add-on must be one of ('web', 'preferences')! Please double-check the configuration under Tools > Add-Ons.")
+            return
 
     action = QAction("Toggle Remaining Card Count", mw)
     qconnect(action.triggered, toggle_remaining_card_count)
