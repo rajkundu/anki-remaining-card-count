@@ -1,4 +1,4 @@
-# Toggle Remaining Card Counts
+# Toggle Remaining Card Count
 
 **AnkiWeb Page: https://ankiweb.net/shared/info/1489494509**
 
