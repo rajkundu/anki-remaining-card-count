@@ -1,5 +1,7 @@
 # Toggle Remaining Card Counts
 
+**AnkiWeb Page: https://ankiweb.net/shared/info/1489494509**
+
 ![Screenshot of remaining card count in Anki](remaining_card_count.png)
 
 This add-on allows you to toggle visibility of the Remaining Card Count (pictured above) using either a keyboard shortcut or an Anki Menu Bar item.
