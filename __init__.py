@@ -13,9 +13,23 @@ def toggle_count_via_preferences():
 
 def toggle_count_via_web():
     mw.bottomWeb.eval("""
-        var countWrapper = document.querySelector('.stattxt');
-        if (countWrapper) {
-            countWrapper.style.visibility = countWrapper.style.visibility === "hidden" ? "visible" : "hidden";
+        var styleTag = document.getElementById("remainingCardCountStyle");
+        if (styleTag) {
+            const newVisibility = styleTag.innerHTML.includes('hidden') ? 'visible' : 'hidden';
+            styleTag.innerHTML = `
+                .stattxt {
+                    visibility: ${newVisibility};
+                }
+            `;
+        } else {
+            styleTag = document.createElement("style");
+            styleTag.id = "remainingCardCountStyle";
+            styleTag.innerHTML = `
+                .stattxt {
+                    visibility: hidden; /* hidden because toggle has been called w/ the count initially being visible */
+                }
+            `;
+            document.body.appendChild(styleTag);
         }
     """)
 
